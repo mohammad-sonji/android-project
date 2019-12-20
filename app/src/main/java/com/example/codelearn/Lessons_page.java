@@ -13,7 +13,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class Lessons_page extends AppCompatActivity {
+public class Lessons_page extends MainActivity {
 
     LinearLayout ly;
 
