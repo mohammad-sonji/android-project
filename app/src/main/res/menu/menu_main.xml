@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="pen" app:showAsAction="always" android:icon="@drawable/ic_launcher_background" android:id="@+id/action_pen"/>
+
+    <item android:title="send" app:showAsAction="always" android:icon="@drawable/ic_launcher_foreground" android:id="@+id/action_send"/>
+
+
+    <item
+        android:id="@+id/dark_mode"
+        android:title="dark mode"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="collapseActionView" />
+    <item android:title="settings" android:id="@+id/settings"/>
+
+    <item android:title="about" android:id="@+id/about"/>
+
+</menu>
