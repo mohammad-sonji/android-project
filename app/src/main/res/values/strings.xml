@@ -1,4 +1,294 @@
 <resources>
     <string name="app_name">Code Learn</string>
+
     <string name="lessons">Lessons</string>
+
+    <string name="title_1">System.out.println()</string>
+
+    <string name="title_2">java primitive types</string>
+
+    <string name="title_3">Declaration and initialization</string>
+
+    <string name="title_4">Increment and decrement</string>
+
+    <string name="title_5">Char and String</string>
+
+    <string name="title_6">Relational Operators</string>
+
+    <string name="title_7">if statement</string>
+
+    <string name="title_8">Loops,Nested loop,while loop,do while</string>
+
+    <string name="title_9">Scope</string>
+
+    <string name="title_10">Declaring a method</string>
+
+
+    <string-array name="lesson_1">
+
+        <item>To print a string in java, you need to use System.out.println(“String”).</item>
+
+        <item>Example:</item>
+
+        <item>#c public class Hello {\npublic static void main(String[] args) {\n System.out.println("Hello, World!");\n}\n</item>
+
+        <item>• Its output:</item>
+
+        <item>Hello, world!</item>
+
+        <item>• Console window: Text box into which the program\'s output is printed.</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_2">
+
+        <item>There are 8 simple types in java.</item>
+
+        <item>int: The integer type, with range -2,147,483,648 . . . 2,147,483,647 of size 4 bytes</item>
+
+        <item>byte: The type describing a single byte, with range -128 . . . 127 of size 1 byte</item>
+
+        <item>short: The short integer type, with range -32768 . . . 32767 of size 2 bytes</item>
+
+        <item>long: The long integer type, with range -9,223,372,036,854,775,808 . . . -9,223,372,036,854,775,807 of size 8 bytes</item>
+
+        <item>double: The double-precision floating-point type, with a range of about ±10308 and about 15 significant decimal digits of size 8 bytes</item>
+
+        <item>float: The single-precision floating-point type, with a range of about ±1038 and about 7 significant decimal digits of size 4 bytes</item>
+
+        <item>char: The character type, representing code units in the Unicode encoding scheme of size 2 bytes</item>
+
+        <item>boolean: The type with the two truth values false and true of size 1 byte</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_3">
+
+        <item>• A variable can be declared and initialized in one statement</item>
+
+        <item>• Once given a value, a variable can be used in expressions: </item>
+
+        <item>#c int x;\nx = 3;\nSystem.out.println("x is " + x); //x is 3\nSystem.out.println(5 * x - 1); //14</item>
+
+        <item>• You can assign a value more than once:</item>
+
+        <item>#c int x=3;\nSystem.out.println(x + " here"); // 3 here\nx = 4 + 7;\nSystem.out.println("now x is " + x); // now x is 11</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_4">
+
+        <item>Increment and decrement</item>
+
+        <item>Shortcuts to increase or decrease a variable\'s value by 1 using unary operators (++ and --)</item>
+
+        <item>Shorthand :variable++; Equivalent longer version variable = variable + 1;</item>
+
+        <item>Shorthand :variable--;Equivalent longer version variable = variable - 1;</item>
+
+        <item>#c int x = 2;\nx++; // x = x + 1; // x now stores 3\ndouble gpa = 2.5;\ngpa--; // gpa = gpa - 1;</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_5">
+
+        <item>• Char:A primitive data type representing single characters of text(e.g ‘a’,’b’,’@’,…)</item>
+
+        <item>• "h" is a String, but \'h\' is a char (they are different)</item>
+
+        <item>#c Public static void main(String[] args){\nchar a=’s’;\nSystem.out.println(“student”+a);\n}\nOutput:\nstudents</item>
+
+        <item>A variable of type String is different from the other (primitive) data types we’ve seen so far,It is actually a reference to a String object. </item>
+
+        <item>Examples: </item>
+
+        <item>#c String str = "hello there!";\nint len = str.length(); //Take the size of the string\nString first = str.substring(0, 1);//Take the first element of the string</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_6">
+
+        <item>x Less than y True if x is less than y, otherwise false.</item>
+
+        <item>x Greater than y True if x is greater than y, otherwise false.</item>
+
+        <item> x Less than or equal to y True if x is less than or equal to y, otherwise false.</item>
+
+        <item>x Greater than or equal to y True if x is greater than or equal to y, otherwise false.</item>
+
+        <item>	x Equal y True if x equals y, otherwise false.</item>
+
+        <item>x Not Equal y True if x is not equal to y, otherwise false.</item>
+
+        <item>From highest precedence to lowest:</item>
+
+        <item>1)unary operators: ++,--,+,-</item>
+
+        <item>2)multiplicative operators: *,/,%</item>
+
+        <item>3)additive operators: +,-</item>
+
+        <item>4)relational operators: &lt;,>,&lt;=,>=</item>
+
+        <item>5)equality operators: ==,!=</item>
+
+        <item>6)assignement operators: =,+=,-=,*=,/=,%= </item>
+
+    </string-array>
+
+
+    <string-array name="lesson_7">
+
+        <item>The body of if statement may consist of multiple statements that must be executed in sequence whenever the condition is true.</item>
+
+        <item>These statements must be grouped together to form a block statement by enclosing them in braces { }</item>
+
+        <item>#c • if (amount &lt;= balance)\n{\n double newBalance = balance - amount; \n balance = newBalance; \n}</item>
+
+        <item>• Different types of statements:</item>
+
+        <item>#c ? Simple statement: balance = balance - amount; \n? Compound statement : if (balance >= amount) balance = balance - amount;\n? Block statement : {\ndouble newBalance = balance - amount; \n balance = newBalance; \n }</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_8">
+
+        <item>• Loop statements allow repeatedly executing a statement or a sequence of statements one or more times as long as some condition remains true.</item>
+
+        <item>• There are three loop statements in Java</item>
+
+        <item>– for loop statement, while loop statement, do-while loop statement</item>
+
+        <item>#c for (int i = 1; i &lt;= 4; i++) { // repeat 4 times\n System.out.println("I am so smart");//This will be printed 4 times.\n}</item>
+
+        <item>Nested for loop example:</item>
+
+        <item>#for (int i = 1; i &lt;= 2; i++){\nfor (int j = 1; j &lt;= 3; j++){\n System.out.print("*");\n }\nSystem.out.println();\n}\nOutput:\n***\n***</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_9">
+
+        <item>• scope: The part of a program where a variable exists.</item>
+
+        <item>– From its declaration to the end of the { } braces</item>
+
+        <item>• A variable declared in a for loop exists only in that loop.</item>
+
+        <item>• A variable declared in a method exists only in that method.</item>
+
+        <item>#c public static void main(String[] args){\n int x = 3;\n for (int i = 1; i &lt;= 10; i++) {\n System.out.println(x);\n} \n // i no longer exists here\n}</item>
+
+        <item>Scope implications</item>
+
+        <item>• A variable can\'t be declared twice or used out of its scope.</item>
+
+        <item>• Variables without overlapping scope can have same name.</item>
+
+        <item>#c for (int i = 1; i &lt;= 100; i++) {\n System.out.print("/");\n}\nfor (int i = 1; i &lt;= 100; i++) { // OK\n System.out.print("\\");\n}\nint i = 5; // OK: outside of loop\'s scope</item>
+
+    </string-array>
+
+
+    <string-array name="lesson_10">
+
+        <item>Declaring a method</item>
+
+        <item>#c public static void name() {\n statement;\n}</item>
+
+        <item>• Example:</item>
+
+        <item>#c public static void printWarning() {\n System.out.println("This product causes cancer");\n System.out.println("in lab rats and humans.");\n}\nprintWarning();</item>
+
+        <item>– Output:</item>
+
+        <item>This product causes cancer\nin lab rats and humans.</item>
+
+    </string-array>
+
+
+    <string-array name="mcq_1">
+
+        <item>Exercise:\nFind the correct code between the following java programs: </item>
+
+        <item> If we are using a two digits number in our code, which primitive type is the best to use to save memory. </item>
+
+        <item>#c What is the correct value of x in the following code:\nInt x=-3;\nInt a;\na=2;\nx=3+5;\nx=x+a;</item>
+
+        <item>#c What is the output:\nInt a=2;\nInt a=2;Int b=5;\na++;\nb--;\nint c=a+b;\nSystem.out.println(c);</item>
+
+        <item>#c String hannah = "Did Hannah see bees? Hannah did.";\n• What is the value displayed by the expression hannah.length()? And what is the element display by the expression String s=Hannah.substring(0,1);</item>
+
+        <item>#c What is the result of each of the following logical expressions?\n int x = 42;\n int y = 17;\nint z = 25;\n? y &lt; x &amp;&amp; y &lt;= z\n? x % 2 == y % 2 || x % 2 == z % 2\n? x &lt;= y + z &amp;&amp; x >= y + z\n? !(x &lt; y &amp;&amp; x &lt; z)\n? (x + y) % 2 == 0 || !((z - y) % 2 == 0)</item>
+
+        <item>#c Misuse of if: What will be the output if percent=90? \nScanner console = new Scanner(System.in);\nSystem.out.print("What percentage did you earn? ");\nint percent = console.nextInt();\nif (percent >= 90) {\n System.out.println("A");\n}\nif (percent >= 80) {\n System.out.println("B");\n}\nif (percent >= 70) {\n System.out.println("C");\n}\nif (percent >= 60) {\nSystem.out.println("D");\n}</item>
+
+        <item>#c What is the correct answer?\nInt x=1;\nInt a=0;\nFor(int i=0;i&lt;10;i++){\nWhile(x&lt;5){\nx++;}\na++;\n}\nSystem.out.println(x-a)</item>
+
+        <item>Exercice:What is wrong with this code:\nfor (int i = 1; i &lt;= 100 * line; i++) {\n int i = 2; \n System.out.print("/");\n}\ni = 4;</item>
+
+        <item>#c What will be the output of this code?\npublic class MethodsExample {\npublic static void main(String[] args) {\n message1();\nmessage2();\nSystem.out.print("A");\n }\n public static void message1() {\n System.out.print("B.");\n}\n public static void message2() {\n System.out.print("C");\nmessage1();\n System.out.print("D");\n }\n }</item>
+
+    </string-array>
+
+
+    <string-array name="choices_1">
+
+        <item>A:public class Bug2 {\npublic static void main(String[] args) {\nsystem.out.println("Hello, world!");}},B:public class Bug3 {\npublic static void main(String[] args) {\nSystem.out.println("Hello, world!); } },C:public Bug4 {\npublic static void main(String[] args) {\nSystem.out.println("Hello, world!"); } } ,D:public class Bug6 {\npublic static void main(String[] args) {\nSystem.out.println("Hello, world!"); } }</item>
+
+        <item>A:int,B:byte,C:short,D:char</item>
+
+        <item>A:-3,B:8,C:10,D:12</item>
+
+        <item>A:5,B:6,C:7,D:8</item>
+
+        <item>A:31/”D”,B:28/”D”,C:31/”i”,D:28/”i”</item>
+
+        <item>A:true;false;true;true;true,B:true;false;false;true;false,C:true;false;true;true;false,D:false;false;true;true;true</item>
+
+        <item>A:A,B:BCD,C:ABD,D:ABCD</item>
+
+        <item>A:-5,B:5,C:0,D:10</item>
+
+        <item>A:No error,B:Overlapping scope,C:Element outside the scope,D:Overlapping scope and element outside the scope</item>
+
+        <item>A:BCBDA,B:ADBCB,C:ABCBD,D:BCADB</item>
+
+    </string-array>
+
+
+    <string-array name="answer_1">
+
+        <item>D</item>
+
+        <item>B</item>
+
+        <item>C</item>
+
+        <item>C</item>
+
+        <item>A</item>
+
+        <item>C</item>
+
+        <item>D</item>
+
+        <item>A</item>
+
+        <item>D</item>
+
+        <item>A</item>
+
+    </string-array>
+    <string name="title_activity_lessons_page">Lessons_page</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
