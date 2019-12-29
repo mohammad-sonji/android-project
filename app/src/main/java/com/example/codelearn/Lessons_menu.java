@@ -52,11 +52,12 @@ public class Lessons_menu extends MainActivity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 Toast.makeText(getApplicationContext(), listTitle.get(groupPosition) + " -> " + listDetail.get(listTitle.get(groupPosition)).get( childPosition), Toast.LENGTH_SHORT).show();
-                if(listDetail.get(listTitle.get(groupPosition)).get( childPosition) == "questions"){
+                if(listDetail.get(listTitle.get(groupPosition)).get(childPosition) == "questions"){
                     //Toast.makeText(getApplicationContext(), "going to questions page", Toast.LENGTH_SHORT).show();
-//                    Intent i = new Intent(this, Questions_page.class);
-//                    i.putExtra("lesson_name", listTitle.get(groupPosition));
-//                    startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), Questions_page.class);
+                    String l_num = listTitle.get(groupPosition).substring(7);
+                    i.putExtra("lesson_number", l_num);
+                    startActivity(i);
                } else {
                     //Toast.makeText(getApplicationContext(), "going to lessons page", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(), Lessons_page.class);

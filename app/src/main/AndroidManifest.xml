@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Lessons_page"></activity>
+        <activity android:name=".Questions_page"></activity>
         <activity android:name=".Lessons_menu" />
         <activity android:name=".MainActivity">
             <intent-filter>

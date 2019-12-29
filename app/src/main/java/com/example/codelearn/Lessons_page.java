@@ -16,7 +16,7 @@ import android.widget.TextView;
 public class Lessons_page extends MainActivity {
 
     LinearLayout ly;
-
+    String LESSONNUMBER;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class Lessons_page extends MainActivity {
 
 
         Intent in = getIntent();
-        String LESSONNUMBER = in.getStringExtra("lesson_number");
+        LESSONNUMBER = in.getStringExtra("lesson_number");
 
         //Getting array from resources
         String Name = "lesson_"+LESSONNUMBER;
@@ -98,5 +98,10 @@ public class Lessons_page extends MainActivity {
     public void Back(View view){
         Intent in = new Intent(this, Lessons_menu.class);
         startActivity(in);
+    }
+    public void tomcq(View view){
+        Intent b = new Intent(getApplicationContext(), Questions_page.class);
+        b.putExtra("lesson_number", LESSONNUMBER);
+        startActivity(b);
     }
 }

@@ -241,54 +241,57 @@
 
     <string-array name="choices_1">
 
-        <item>A:public class Bug2 {\npublic static void main(String[] args) {\nsystem.out.println("Hello, world!");}},B:public class Bug3 {\npublic static void main(String[] args) {\nSystem.out.println("Hello, world!); } },C:public Bug4 {\npublic static void main(String[] args) {\nSystem.out.println("Hello, world!"); } } ,D:public class Bug6 {\npublic static void main(String[] args) {\nSystem.out.println("Hello, world!"); } }</item>
+        <item>A: public class Bug2 {...},B: class public Bug3 {...},C: Bug4 public clas {...} ,D: class Bug6 {}</item>
 
-        <item>A:int,B:byte,C:short,D:char</item>
+        <item>A: int,B: byte,C: short,D: char</item>
 
-        <item>A:-3,B:8,C:10,D:12</item>
+        <item>A: -3,B: 8,C: 10,D: 12</item>
 
-        <item>A:5,B:6,C:7,D:8</item>
+        <item>A: 5,B: 6,C: 7,D: 8</item>
 
-        <item>A:31/”D”,B:28/”D”,C:31/”i”,D:28/”i”</item>
+        <item>A: 31/”D”,B: 28/”D”,C: 31/”i”,D: 28/”i”</item>
 
-        <item>A:true;false;true;true;true,B:true;false;false;true;false,C:true;false;true;true;false,D:false;false;true;true;true</item>
+        <item>A: true;false;true;true;true,B: true;false;false;true;false,C: true;false;true;true;false,D: false;false;true;true;true</item>
 
-        <item>A:A,B:BCD,C:ABD,D:ABCD</item>
+        <item>A: A,B: BCD,C: ABD,D: ABCD</item>
 
-        <item>A:-5,B:5,C:0,D:10</item>
+        <item>A: -5,B: 5,C: 0,D: 10</item>
 
-        <item>A:No error,B:Overlapping scope,C:Element outside the scope,D:Overlapping scope and element outside the scope</item>
+        <item>A: No error,B: Overlapping scope,C: Element outside the scope,D: Overlapping scope and element outside the scope</item>
 
-        <item>A:BCBDA,B:ADBCB,C:ABCBD,D:BCADB</item>
+        <item>A: BCBDA,B: ADBCB,C: ABCBD,D: BCADB</item>
 
     </string-array>
 
 
     <string-array name="answer_1">
 
-        <item>D</item>
+        <item>d</item>
 
-        <item>B</item>
+        <item>b</item>
 
-        <item>C</item>
+        <item>c</item>
 
-        <item>C</item>
+        <item>c</item>
 
-        <item>A</item>
+        <item>a</item>
 
-        <item>C</item>
+        <item>c</item>
 
-        <item>D</item>
+        <item>d</item>
 
-        <item>A</item>
+        <item>a</item>
 
-        <item>D</item>
+        <item>d</item>
 
-        <item>A</item>
+        <item>a</item>
 
     </string-array>
     <string name="title_activity_lessons_page">Lessons_page</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="home">Home</string>
+    <string name="previous">Previous</string>
+    <string name="next">next</string>
 </resources>
