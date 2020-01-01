@@ -8,7 +8,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class Questions_page extends MainActivity {
 
     Button previous, home;
@@ -47,12 +46,20 @@ public class Questions_page extends MainActivity {
     }
     public void CheckAnswer(View view) {
         if(a.isChecked() && answers[Integer.valueOf(LESSONNUMBER) - 1].equals("a")){
+            Intent i = new Intent(getApplicationContext(), MainActivity_notification.class);
+            startActivity(i);
             Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
         } else if(b.isChecked() && answers[Integer.valueOf(LESSONNUMBER) - 1].equals("b")){
+            Intent i = new Intent(getApplicationContext(), MainActivity_notification.class);
+            startActivity(i);
             Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
         } else if(c.isChecked() && answers[Integer.valueOf(LESSONNUMBER) - 1].equals("c")){
+            Intent i = new Intent(getApplicationContext(), MainActivity_notification.class);
+            startActivity(i);
             Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
         } else if(d.isChecked() && answers[Integer.valueOf(LESSONNUMBER) - 1].equals("d")){
+            Intent i = new Intent(getApplicationContext(), MainActivity_notification.class);
+            startActivity(i);
             Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
         } else{
             Toast.makeText(getApplicationContext(), "wrong :(", Toast.LENGTH_SHORT).show();

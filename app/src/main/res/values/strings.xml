@@ -295,4 +295,9 @@
     <string name="previous">Previous</string>
     <string name="next">next</string>
     <string name="back">back</string>
+
+
+    <string name="notification">New Notification</string>
+    <string name="notification_channel_description">This is a sample notification channel for demonstration purpose.</string>
+
 </resources>
