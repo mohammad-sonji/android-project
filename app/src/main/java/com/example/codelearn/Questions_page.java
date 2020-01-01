@@ -63,7 +63,7 @@ public class Questions_page extends MainActivity {
         Intent in = new Intent(getApplicationContext(), Lessons_menu.class);
         startActivity(in);
     }
-    public void Next(View view){
+    public void Back(View view){
         Intent b = new Intent(getApplicationContext(), Lessons_page.class);
         b.putExtra("lesson_number", LESSONNUMBER);
         startActivity(b);

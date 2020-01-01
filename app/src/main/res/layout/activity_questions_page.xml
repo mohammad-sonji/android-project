@@ -90,8 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:onClick="Next"
-            android:text="@string/next" />
+            android:onClick="Back"
+            android:text="@string/back" />
 
         <Button
             android:id="@+id/button"
