@@ -1,7 +1,9 @@
 package com.example.codelearn;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -42,6 +44,15 @@ public class Questions_page extends MainActivity {
         d.setText(choices_seperated[3]);
         int answer = getResources().getIdentifier("answer_1", "array", this.getPackageName());
         answers = getResources().getStringArray(answer);
+        //dark mode
+        if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_mode",false)){
+            text.setTextColor(Color.WHITE);
+            a.setTextColor(Color.WHITE);
+            b.setTextColor(Color.WHITE);
+            c.setTextColor(Color.WHITE);
+            d.setTextColor(Color.WHITE);
+            findViewById(R.id.layout).setBackgroundColor(Color.BLACK);
+        }
 
     }
     public void CheckAnswer(View view) {

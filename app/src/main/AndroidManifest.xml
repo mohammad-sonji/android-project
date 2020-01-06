@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Lessons_page"></activity>
-        <activity android:name=".Questions_page"></activity>
+        <activity android:name=".About"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".Lessons_page" />
+        <activity android:name=".Questions_page" />
         <activity android:name=".Lessons_menu" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -19,8 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity_notification">
-        </activity>
+        <activity android:name=".MainActivity_notification" />
 
         <receiver
             android:name=".AlarmReceiver"
