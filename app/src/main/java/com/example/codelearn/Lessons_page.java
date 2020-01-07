@@ -134,8 +134,7 @@ public class Lessons_page extends MainActivity {
     }
 
     public void Back(View view){
-        Intent in = new Intent(this, Lessons_menu.class);
-        startActivity(in);
+       finish();
     }
     public void tomcq(View view){
         Intent b = new Intent(getApplicationContext(), Questions_page.class);

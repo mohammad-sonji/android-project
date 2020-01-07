@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,20 +33,33 @@ public class Questions_page extends MainActivity {
         //Questions
         Intent intent = getIntent();
         LESSONNUMBER = intent.getStringExtra("lesson_number");
-        int id = getResources().getIdentifier("mcq_1", "array", this.getPackageName());
+        int id;
+        int answer;
+        int choice;
+        if(LESSONNUMBER.charAt(LESSONNUMBER.length()-1) == 'C') {
+            id = getResources().getIdentifier("mcq_1C", "array", this.getPackageName());
+            answer = getResources().getIdentifier("answer_1C", "array", this.getPackageName());
+            choice = getResources().getIdentifier("choices_1C", "array", this.getPackageName());
+            LESSONNUMBER = LESSONNUMBER.substring(0,LESSONNUMBER.length()-1);
+        }
+        else {
+            id = getResources().getIdentifier("mcq_1", "array", this.getPackageName());
+            answer = getResources().getIdentifier("answer_1", "array", this.getPackageName());
+            choice = getResources().getIdentifier("choices_1", "array", this.getPackageName());
+        }
         String[] ary = getResources().getStringArray(id);
         text.setText(ary[Integer.valueOf(LESSONNUMBER) - 1]);
-        int choice = getResources().getIdentifier("choices_1", "array", this.getPackageName());
         String[] choices_1 = getResources().getStringArray(choice);
         String[] choices_seperated = choices_1[Integer.valueOf(LESSONNUMBER) - 1].split(",");
         a.setText(choices_seperated[0]);
         b.setText(choices_seperated[1]);
         c.setText(choices_seperated[2]);
         d.setText(choices_seperated[3]);
-        int answer = getResources().getIdentifier("answer_1", "array", this.getPackageName());
+
         answers = getResources().getStringArray(answer);
         //dark mode
         if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_mode",false)){
+            ((RadioGroup)findViewById(R.id.radiogroup)).setBackgroundColor(Color.parseColor("#303030"));
             text.setTextColor(Color.WHITE);
             a.setTextColor(Color.WHITE);
             b.setTextColor(Color.WHITE);
@@ -79,11 +93,10 @@ public class Questions_page extends MainActivity {
 
     public void Home(View view){
         Intent in = new Intent(getApplicationContext(), Lessons_menu.class);
+        in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(in);
     }
     public void Back(View view){
-        Intent b = new Intent(getApplicationContext(), Lessons_page.class);
-        b.putExtra("lesson_number", LESSONNUMBER);
-        startActivity(b);
+        finish();
     }
 }

@@ -17,9 +17,36 @@
         android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
         android:padding="15dp"
         android:visibility="visible" />-->
+    <LinearLayout
+        android:id="@+id/language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/java"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="-0.125dp"
+            android:layout_weight="1"
+            android:background="@drawable/unclickedbutton"
+            android:text="Java" />
+
+        <Button
+            android:id="@+id/cpp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="0.125dp"
+            android:layout_weight="1"
+            android:background="@drawable/unclickedbutton"
+            android:text="C++" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/language">
 
         <LinearLayout
             android:id="@+id/ln"

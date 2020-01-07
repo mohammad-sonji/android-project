@@ -3,6 +3,7 @@
 
     <string name="lessons">Lessons</string>
 
+    <!-- TITLES FOR JAVA LESSONS -->
     <string name="title_1">System.out.println()</string>
 
     <string name="title_2">java primitive types</string>
@@ -23,20 +24,114 @@
 
     <string name="title_10">Declaring a method</string>
 
+    <!-- TITLES FOR C++ LESSONS -->
+    <string name="title_1C">cout&lt;&lt;\"Hello World!\"</string>
 
+    <string name="title_2C">Variables</string>
+
+    <string name="title_3C">Operators</string>
+
+    <string name="title_4C">Casting</string>
+
+    <string name="title_5C">Operations on bool</string>
+
+    <!-- C++ LESSONS -->
+    <string-array name="lesson_1C">
+        <item>To print in C++, you should use the cout&lt;&lt;\"AnythingHere\" statement</item>
+        <item>Your program should look like this:</item>
+        <item>#c#include&lt;iostream&gt;//always include this to use cout or cin\n\nusing namespace std;\nint main()\n{\n\t\tcout&lt;&lt;"Hello World!";\n\n\t\treturn 0//always return 0 at the very end of the main\n}</item>
+        <item>Output:</item>
+        <item>\tHello World!</item>
+    </string-array>
+    <string-array name="lesson_2C">
+        <item>in programming, variables holds values (like numbers or letters)</item>
+        <item>There are several types of variables:</item>
+        <item> • char: Holds a singe character (ex: \'a\', \'B\', \'4\', or \'$\' </item>
+        <item> • bool: either true or false</item>
+        <item> • int: Hold integer numbers (ex:1234, 0, 5)</item>
+        <item> • double: double-precision floating point value (ex:123.43, 40.0, 48.5)\nnote: 31 is and integer while 31.0 is double</item>
+        <item> • Float: Single-precision floating point value.</item>
+        <item>example:</item>
+        <item>#c#include&lt;iostream&gt;\n\nusing namespace std;\nint main()\n{\n\t\tint n = 5;\n\t\tchar z = \'r\';\n\t\tbool flag = true;\n\t\tdouble num = 43//will be saved as 43.0\n\t\tdouble num2 = 40440.1231\n\t\tfloat v = 123 \n\n\t\treturn 0\n}</item>
+        <item> • there are global variables and local variables, local variables can only bes used between a specific scope (between { and }\nwhile global variables can be used at the whole class</item>
+        <item>example:</item>
+        <item>#c#include&lt;iostream&gt;\nusing namespace std;\nint g = 500;//global variable\n\nint main()\n{\n\t\tint x = 0;//local variable can only be used in the main\n\n\t\treturn 0\n}</item>
+    </string-array>
+    <string-array name="lesson_3C">
+        <item>- is for substraction\n+ is for addition\n* is for multiplication\n/ is for subtraction\n% is for modulo</item>
+        <item>example:</item>
+        <item>#cint x = 5 / 2 //x = 2 not 2.5 since int does not hold decimal numbers\nint y = x + 2//then y = 4\n doublez = 5/2//z = 2 since 5 and 2 are integers\ndouble w = 5.0/2 //w = 2.5 since 5.0 is double\ndouble a = 5/2.0//a = 2.5 since 2.0 is double\nint b = 2.0//this will give an error since int can\'t equal double but double can equal int\nint c = 10%4//c = 2 since 10/2 = 8 with as a remainder</item>
+    </string-array>
+    <string-array name="lesson_4C">
+        <item>Casting converts they primitive type</item>
+        <item>example:</item>
+        <item>#cint x = 2.4//this will give an error since int can\'t equal a double like 2.4\nint y = (int)2.4//this will cast the double 2.4 to int, y = 2</item>
+        <item>casting from double to int will remove the decimal side.</item>
+        <item>#cdouble x = 3.9\nint y = (int) x//y = 3</item>
+        <item>casting from char to int gives you the ascii code of the character</item>
+        <item>#cint x = (int)\'A\'//x = 65</item>
+        <item>notes:</item>
+        <item> • you can\'t cast to or from bool</item>
+    </string-array>
+    <string-array name="lesson_5C">
+        <item>like adding and subtracting numbers we can compare variables to either give us true or false</item>
+        <item> • a==b true if the two values are equal</item>
+        <item> • a!=b true if the two values are not equal</item>
+        <item> • a&lt;b true if the first value is smaller than the second</item>
+        <item> • a&gt;b true if the first value is greater than the second</item>
+        <item> • a&lt;=b true if the first value is smaller or equal to the second</item>
+        <item> • a&gt;=b true if the first value is greater or equal to the second</item>
+        <item>example:</item>
+        <item>#cbool f = 12==5//f = false\n\nint value1 = 20;\nint value2 = 30;\nf = value1&lt;=value2//f = true</item>
+        <item>\t</item>
+        <item> • &amp;&amp; means "and":\ntrue and true = true\ntrue and false = false\nfalse and false = false\n</item>
+        <item> •  || means "or":\n true or true = true\n true or false = true\n false or false = false\n</item>
+        <item>example:</item>
+        <item>#cbool flag = 12 == 12 &amp;&amp; 12&lt;10 //true and false = false</item>
+    </string-array>
+
+    <!-- C++ MCQ (QUESTIONS) -->
+    <string-array name="mcq_1C">
+        <item>Which is the correct format?</item>
+        <item>Which of the following will give an error?</item>
+        <item>What is the value of num?\ndouble num = 10/3 + 10%3</item>
+        <item>What is the value of num?\nint num = (int)(20.0/5.0) + (int)(\'a\')\nHint:the ascii of \'a\' is 97</item>
+        <item>is flag1 and flag2 true or false?\nbool flag1 = true &amp;&amp; 5%2!=0\nbool flag2 = (false||true) &amp;&amp; (true&amp;&amp;false)</item>
+
+    </string-array>
+
+    <!-- C++ MCQ (CHOICES) -->
+    <string-array name="choices_1C">
+        <item>cout&gt;&gt;Hello World!;,cout&gt;&gt;\"Helloworld\";,cout&lt;&lt;\"world\";,cout&lt;&lt;Hello World!</item>
+        <item>double r =10,char t = x,double d = 10.2, int s = 2</item>
+        <item>6.66,4,4.33,4.0</item>
+        <item>error,0,4,101</item>
+        <item>false/false,false/true,true/false,true/true</item>
+    </string-array>
+
+    <!-- C++ MCQ (ANSWER) -->
+    <string-array name="answer_1C">
+        <item>c</item>
+        <item>b</item>
+        <item>d</item>
+        <item>d</item>
+        <item>c</item>
+    </string-array>
+
+    <!-- JAVA LESSONS -->
     <string-array name="lesson_1">
 
         <item>To print a string in java, you need to use System.out.println(“String”).</item>
 
         <item>Example:</item>
 
-        <item>#c public class Hello {\npublic static void main(String[] args) {\n System.out.println("Hello, World!");\n}\n</item>
+        <item>#cpublic class Hello {\npublic static void main(String[] args) {\n System.out.println("Hello, World!");\n}\n</item>
 
-        <item>• Its output:</item>
+        <item> • Its output:</item>
 
         <item>Hello, world!</item>
 
-        <item>• Console window: Text box into which the program\'s output is printed.</item>
+        <item> • Console window: Text box into which the program\'s output is printed.</item>
 
     </string-array>
 
@@ -62,23 +157,19 @@
         <item>boolean: The type with the two truth values false and true of size 1 byte</item>
 
     </string-array>
-
-
     <string-array name="lesson_3">
 
-        <item>• A variable can be declared and initialized in one statement</item>
+        <item> • A variable can be declared and initialized in one statement</item>
 
-        <item>• Once given a value, a variable can be used in expressions: </item>
+        <item> • Once given a value, a variable can be used in expressions: </item>
 
-        <item>#c int x;\nx = 3;\nSystem.out.println("x is " + x); //x is 3\nSystem.out.println(5 * x - 1); //14</item>
+        <item>#cint x;\nx = 3;\nSystem.out.println("x is " + x); //x is 3\nSystem.out.println(5 * x - 1); //14</item>
 
-        <item>• You can assign a value more than once:</item>
+        <item> • You can assign a value more than once:</item>
 
-        <item>#c int x=3;\nSystem.out.println(x + " here"); // 3 here\nx = 4 + 7;\nSystem.out.println("now x is " + x); // now x is 11</item>
+        <item>#cint x=3;\nSystem.out.println(x + " here"); // 3 here\nx = 4 + 7;\nSystem.out.println("now x is " + x); // now x is 11</item>
 
     </string-array>
-
-
     <string-array name="lesson_4">
 
         <item>Increment and decrement</item>
@@ -96,32 +187,30 @@
 
     <string-array name="lesson_5">
 
-        <item>• Char:A primitive data type representing single characters of text(e.g ‘a’,’b’,’@’,…)</item>
+        <item> • Char:A primitive data type representing single characters of text(e.g ‘a’,’b’,’@’,…)</item>
 
-        <item>• "h" is a String, but \'h\' is a char (they are different)</item>
+        <item> • "h" is a String, but \'h\' is a char (they are different)</item>
 
-        <item>#c Public static void main(String[] args){\nchar a=’s’;\nSystem.out.println(“student”+a);\n}\nOutput:\nstudents</item>
+        <item>#cPublic static void main(String[] args){\nchar a=’s’;\nSystem.out.println(“student”+a);\n}\nOutput:\nstudents</item>
 
         <item>A variable of type String is different from the other (primitive) data types we’ve seen so far,It is actually a reference to a String object. </item>
 
         <item>Examples: </item>
 
-        <item>#c String str = "hello there!";\nint len = str.length(); //Take the size of the string\nString first = str.substring(0, 1);//Take the first element of the string</item>
+        <item>#cString str = "hello there!";\nint len = str.length(); //Take the size of the string\nString first = str.substring(0, 1);//Take the first element of the string</item>
 
     </string-array>
-
-
     <string-array name="lesson_6">
 
         <item>x Less than y True if x is less than y, otherwise false.</item>
 
         <item>x Greater than y True if x is greater than y, otherwise false.</item>
 
-        <item> x Less than or equal to y True if x is less than or equal to y, otherwise false.</item>
+        <item>x Less than or equal to y True if x is less than or equal to y, otherwise false.</item>
 
         <item>x Greater than or equal to y True if x is greater than or equal to y, otherwise false.</item>
 
-        <item>	x Equal y True if x equals y, otherwise false.</item>
+        <item>x Equal y True if x equals y, otherwise false.</item>
 
         <item>x Not Equal y True if x is not equal to y, otherwise false.</item>
 
@@ -140,8 +229,6 @@
         <item>6)assignement operators: =,+=,-=,*=,/=,%= </item>
 
     </string-array>
-
-
     <string-array name="lesson_7">
 
         <item>The body of if statement may consist of multiple statements that must be executed in sequence whenever the condition is true.</item>
@@ -152,7 +239,7 @@
 
         <item>• Different types of statements:</item>
 
-        <item>#c ? Simple statement: balance = balance - amount; \n? Compound statement : if (balance >= amount) balance = balance - amount;\n? Block statement : {\ndouble newBalance = balance - amount; \n balance = newBalance; \n }</item>
+        <item>#c • Simple statement: balance = balance - amount; \n? Compound statement : if (balance >= amount) balance = balance - amount;\n? Block statement : {\ndouble newBalance = balance - amount; \n balance = newBalance; \n }</item>
 
     </string-array>
 
@@ -172,8 +259,6 @@
         <item>#for (int i = 1; i &lt;= 2; i++){\nfor (int j = 1; j &lt;= 3; j++){\n System.out.print("*");\n }\nSystem.out.println();\n}\nOutput:\n***\n***</item>
 
     </string-array>
-
-
     <string-array name="lesson_9">
 
         <item>• scope: The part of a program where a variable exists.</item>
@@ -214,56 +299,59 @@
     </string-array>
 
 
+    <!-- JAVA MCQ (QUESTIONS) -->
     <string-array name="mcq_1">
 
         <item>Exercise:\nFind the correct code between the following java programs: </item>
 
-        <item> If we are using a two digits number in our code, which primitive type is the best to use to save memory. </item>
+        <item>If we are using a two digits number in our code, which primitive type is the best to use to save memory. </item>
 
-        <item>#c What is the correct value of x in the following code:\nInt x=-3;\nInt a;\na=2;\nx=3+5;\nx=x+a;</item>
+        <item>What is the correct value of x in the following code:\nInt x=-3;\nInt a;\na=2;\nx=3+5;\nx=x+a;</item>
 
-        <item>#c What is the output:\nInt a=2;\nInt a=2;Int b=5;\na++;\nb--;\nint c=a+b;\nSystem.out.println(c);</item>
+        <item>What is the output:\nInt a=2;\nInt a=2;Int b=5;\na++;\nb--;\nint c=a+b;\nSystem.out.println(c);</item>
 
-        <item>#c String hannah = "Did Hannah see bees? Hannah did.";\n• What is the value displayed by the expression hannah.length()? And what is the element display by the expression String s=Hannah.substring(0,1);</item>
+        <item>String hannah = "Did Hannah see bees? Hannah did.";\n• What is the value displayed by the expression hannah.length()? And what is the element display by the expression String s=Hannah.substring(0,1);</item>
 
-        <item>#c What is the result of each of the following logical expressions?\n int x = 42;\n int y = 17;\nint z = 25;\n? y &lt; x &amp;&amp; y &lt;= z\n? x % 2 == y % 2 || x % 2 == z % 2\n? x &lt;= y + z &amp;&amp; x >= y + z\n? !(x &lt; y &amp;&amp; x &lt; z)\n? (x + y) % 2 == 0 || !((z - y) % 2 == 0)</item>
+        <item>What is the result of each of the following logical expressions?\n int x = 42;\n int y = 17;\nint z = 25;\n? y &lt; x &amp;&amp; y &lt;= z\n? x % 2 == y % 2 || x % 2 == z % 2\n? x &lt;= y + z &amp;&amp; x >= y + z\n? !(x &lt; y &amp;&amp; x &lt; z)\n? (x + y) % 2 == 0 || !((z - y) % 2 == 0)</item>
 
-        <item>#c Misuse of if: What will be the output if percent=90? \nScanner console = new Scanner(System.in);\nSystem.out.print("What percentage did you earn? ");\nint percent = console.nextInt();\nif (percent >= 90) {\n System.out.println("A");\n}\nif (percent >= 80) {\n System.out.println("B");\n}\nif (percent >= 70) {\n System.out.println("C");\n}\nif (percent >= 60) {\nSystem.out.println("D");\n}</item>
+        <item>Misuse of if: What will be the output if percent=90? \nScanner console = new Scanner(System.in);\nSystem.out.print("What percentage did you earn? ");\nint percent = console.nextInt();\nif (percent >= 90) {\n System.out.println("A");\n}\nif (percent >= 80) {\n System.out.println("B");\n}\nif (percent >= 70) {\n System.out.println("C");\n}\nif (percent >= 60) {\nSystem.out.println("D");\n}</item>
 
-        <item>#c What is the correct answer?\nInt x=1;\nInt a=0;\nFor(int i=0;i&lt;10;i++){\nWhile(x&lt;5){\nx++;}\na++;\n}\nSystem.out.println(x-a)</item>
+        <item>What is the correct answer?\nInt x=1;\nInt a=0;\nFor(int i=0;i&lt;10;i++){\nWhile(x&lt;5){\nx++;}\na++;\n}\nSystem.out.println(x-a)</item>
 
         <item>Exercice:What is wrong with this code:\nfor (int i = 1; i &lt;= 100 * line; i++) {\n int i = 2; \n System.out.print("/");\n}\ni = 4;</item>
 
-        <item>#c What will be the output of this code?\npublic class MethodsExample {\npublic static void main(String[] args) {\n message1();\nmessage2();\nSystem.out.print("A");\n }\n public static void message1() {\n System.out.print("B.");\n}\n public static void message2() {\n System.out.print("C");\nmessage1();\n System.out.print("D");\n }\n }</item>
+        <item>What will be the output of this code?\npublic class MethodsExample {\npublic static void main(String[] args) {\n message1();\nmessage2();\nSystem.out.print("A");\n }\n public static void message1() {\n System.out.print("B.");\n}\n public static void message2() {\n System.out.print("C");\nmessage1();\n System.out.print("D");\n }\n }</item>
 
     </string-array>
 
 
+    <!-- JAVA MCQ (CHOICES) -->
     <string-array name="choices_1">
 
-        <item>A: public class Bug2 {...},B: class public Bug3 {...},C: Bug4 public clas {...} ,D: class Bug6 {}</item>
+        <item>public class Bug2 {...},class public Bug3 {...},Bug4 public clas {...} ,class Bug6 {}</item>
 
-        <item>A: int,B: byte,C: short,D: char</item>
+        <item>int,byte,short,char</item>
 
-        <item>A: -3,B: 8,C: 10,D: 12</item>
+        <item>-3,8,10,12</item>
 
-        <item>A: 5,B: 6,C: 7,D: 8</item>
+        <item>5,6,7,8</item>
 
         <item>A: 31/”D”,B: 28/”D”,C: 31/”i”,D: 28/”i”</item>
 
-        <item>A: true;false;true;true;true,B: true;false;false;true;false,C: true;false;true;true;false,D: false;false;true;true;true</item>
+        <item>true;false;true;true;true,true;false;false;true;false,true;false;true;true;false,false;false;true;true;true</item>
 
-        <item>A: A,B: BCD,C: ABD,D: ABCD</item>
+        <item>A,BCD,ABD,ABCD</item>
 
-        <item>A: -5,B: 5,C: 0,D: 10</item>
+        <item>-5,5,0,10</item>
 
-        <item>A: No error,B: Overlapping scope,C: Element outside the scope,D: Overlapping scope and element outside the scope</item>
+        <item>No error,Overlapping scope,Element outside the scope,Overlapping scope and element outside the scope</item>
 
-        <item>A: BCBDA,B: ADBCB,C: ABCBD,D: BCADB</item>
+        <item>BCBDA,ADBCB,ABCBD,BCADB</item>
 
     </string-array>
 
 
+    <!-- JAVA MCQ (ANSWERS) -->
     <string-array name="answer_1">
 
         <item>d</item>
