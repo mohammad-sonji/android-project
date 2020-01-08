@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.codelearn.R
 import com.example.codelearn.NotificationUtils
 import java.util.*
+import android.view.View
 
 class MainActivity_notification : AppCompatActivity() {
 
@@ -15,5 +16,9 @@ class MainActivity_notification : AppCompatActivity() {
         setContentView(R.layout.activity_main_correct);
             NotificationUtils().setNotification(mNotificationTime, this@MainActivity_notification)
 
+    }
+
+    fun backbtn(view: View){
+        finish()
     }
 }
