@@ -54,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), About.class);
             startActivity(i);
         }
-        if(item.getItemId() == R.id.about)
-            Toast.makeText(this, "you clicked on the envelope", Toast.LENGTH_LONG).show();
         return super.onOptionsItemSelected(item);
     }
 
