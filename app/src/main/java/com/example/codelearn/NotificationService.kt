@@ -1,6 +1,5 @@
 package com.example.codelearn
 
-
 import android.annotation.SuppressLint
 import android.app.*
 import android.content.Context
@@ -19,14 +18,13 @@ class NotificationService : IntentService("NotificationService") {
     private lateinit var mNotification: Notification
     private val mNotificationId: Int = 1000
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi") // lint is a tool that check for bugs in project
     private fun createChannel() {
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-            // Create the NotificationChannel, but only on API 26+ because
-            // the NotificationChannel class is new and not in the support library
+            // API less than 26 do not support the notification channel class
 
             val context = this.applicationContext
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -43,7 +41,7 @@ class NotificationService : IntentService("NotificationService") {
         }
 
     }
-
+    // this is a function tied to the class
     companion object {
 
         const val CHANNEL_ID = "samples.notification.devdeeds.com.CHANNEL_ID"
@@ -54,8 +52,8 @@ class NotificationService : IntentService("NotificationService") {
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onHandleIntent(intent: Intent?) {
 
-        //Create Channel
         createChannel()
+
 
         var timestamp: Long = 0
         if (intent != null && intent.extras != null) {
@@ -66,21 +64,22 @@ class NotificationService : IntentService("NotificationService") {
 
             val context = this.applicationContext
             var notificationManager: NotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-//            val notifyIntent = Intent(this, ResultActivity::class.java)
+            val notifyIntent = Intent(this, ResultActivity::class.java)
 
             val title = "Sample Notification"
             val message = "You have received a sample notification. This notification will take you to the details page."
 
-//            notifyIntent.putExtra("title", title)
-//            notifyIntent.putExtra("message", message)
-//            notifyIntent.putExtra("notification", true)
-//            notifyIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            notifyIntent.putExtra("title", title)
+            notifyIntent.putExtra("message", message)
+            notifyIntent.putExtra("notification", true)
+
+            notifyIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
             val calendar = Calendar.getInstance()
             calendar.timeInMillis = timestamp
 
 
-//            val pendingIntent = PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+            val pendingIntent = PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
             val res = this.resources
             val uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 
@@ -89,7 +88,7 @@ class NotificationService : IntentService("NotificationService") {
 
                 mNotification = Notification.Builder(this, CHANNEL_ID)
                         // Set the intent that will fire when the user taps the notification
-//                        .setContentIntent(pendingIntent)
+                        .setContentIntent(pendingIntent)
                         .setSmallIcon(R.drawable.ic_stat_name)
                         .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
                         .setAutoCancel(true)
@@ -101,7 +100,7 @@ class NotificationService : IntentService("NotificationService") {
 
                 mNotification = Notification.Builder(this)
                         // Set the intent that will fire when the user taps the notification
-//                        .setContentIntent(pendingIntent)
+                        .setContentIntent(pendingIntent)
                         .setSmallIcon(R.drawable.ic_stat_name)
                         .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
                         .setAutoCancel(true)
@@ -115,9 +114,8 @@ class NotificationService : IntentService("NotificationService") {
             }
 
 
-
             notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            // mNotificationId is a unique int for each notification that you must define
+
             notificationManager.notify(mNotificationId, mNotification)
         }
 
