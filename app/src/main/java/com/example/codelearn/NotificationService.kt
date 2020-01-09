@@ -64,22 +64,22 @@ class NotificationService : IntentService("NotificationService") {
 
             val context = this.applicationContext
             var notificationManager: NotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            val notifyIntent = Intent(this, ResultActivity::class.java)
+//            val notifyIntent = Intent(this, ResultActivity::class.java)
 
             val title = "Sample Notification"
             val message = "You have received a sample notification. This notification will take you to the details page."
 
-            notifyIntent.putExtra("title", title)
-            notifyIntent.putExtra("message", message)
-            notifyIntent.putExtra("notification", true)
-
-            notifyIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+//            notifyIntent.putExtra("title", title)
+//            notifyIntent.putExtra("message", message)
+//            notifyIntent.putExtra("notification", true)
+//
+//            notifyIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
             val calendar = Calendar.getInstance()
             calendar.timeInMillis = timestamp
 
 
-            val pendingIntent = PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+//            val pendingIntent = PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
             val res = this.resources
             val uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 
@@ -88,7 +88,7 @@ class NotificationService : IntentService("NotificationService") {
 
                 mNotification = Notification.Builder(this, CHANNEL_ID)
                         // Set the intent that will fire when the user taps the notification
-                        .setContentIntent(pendingIntent)
+//                        .setContentIntent(pendingIntent)
                         .setSmallIcon(R.drawable.ic_stat_name)
                         .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
                         .setAutoCancel(true)
@@ -100,7 +100,7 @@ class NotificationService : IntentService("NotificationService") {
 
                 mNotification = Notification.Builder(this)
                         // Set the intent that will fire when the user taps the notification
-                        .setContentIntent(pendingIntent)
+//                        .setContentIntent(pendingIntent)
                         .setSmallIcon(R.drawable.ic_stat_name)
                         .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
                         .setAutoCancel(true)
